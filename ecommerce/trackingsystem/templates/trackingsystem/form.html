@@ -1,0 +1,26 @@
+{% extends 'ecommerce/base.html' %}
+{% load static %}
+
+{% block title %}
+    Add Order
+{% endblock %}
+
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'trackingsystem/styles.css' %}">
+{% endblock %}
+
+
+{% block body %}
+    <div class="adding">
+        <form action="{% url 'trackingsystem:add' %}" method="post">
+            {% csrf_token %}
+            {% for field in form %}
+                {{ field.label_tag}} {{field}} 
+            {% endfor %} 
+            <button type="submit"> Submit </button>
+        </form>
+    </div>
+
+{% endblock %}
+    

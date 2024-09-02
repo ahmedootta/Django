@@ -1,0 +1,49 @@
+body{
+    background-color: rgba(189, 189, 194, 0.096);
+}
+
+.adding{
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+}
+
+.orders{
+    text-align: left;
+    padding: 1rem;
+
+}
+
+span{
+    font-size: medium;
+    font-weight: bold;
+    color: brown;
+
+}
+
+input, select{
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    outline: none;
+    border: 1px solid cornflowerblue;
+}
+
+
+input:focus, select:focus{
+    box-shadow: -1px 1px 1px rgb(0, 132, 255), 1px -1px 1px rgb(0, 132, 255);
+}
+
+button{
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    border-color: blue;
+    color: blue;
+    background-color: rgb(193, 235, 165);
+    cursor: pointer;
+}
+
+
+nav, ul{
+    padding: 30px;
+    color: darkmagenta;
+}

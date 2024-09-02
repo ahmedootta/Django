@@ -1,0 +1,22 @@
+{% extends 'ecommerce/base.html' %}
+{% load static %}
+
+{% block title %}
+    Tracking System
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'trackingsystem/styles.css' %}">
+    
+{% endblock %}
+
+{% block body %}
+    {% for dic in orders %}
+        <div class="orders">
+            {% for key, value in dic.items %}
+                <p><span>{{ key}} </span>: {{value}}</p>
+            {% endfor %}
+            <p>----------------------------------------</p>
+        </div>    
+    {% endfor %}
+{% endblock %}
