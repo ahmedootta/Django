@@ -1,0 +1,16 @@
+{% extends 'trackingsystem/layout.html' %}
+
+{% block title %}
+    Tracking System
+{% endblock %}
+
+{% block body %}
+    {% for dic in orders %}
+        <div class="orders">
+            {% for key, value in dic.items %}
+                <p><span>{{ key}} </span>: {{value}}</p>
+            {% endfor %}
+            <p>----------------------------------------</p>
+        </div>    
+    {% endfor %}
+{% endblock %}
