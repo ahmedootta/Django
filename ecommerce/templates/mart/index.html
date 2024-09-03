@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Mart
+{% endblock %}
+
+{% block link %}
+<link rel="stylesheet" href="{% static 'mart/styles.css' %}">
+{% endblock %}
+
+{% block body %}
+<div class="products-grid">
+    {% for dic in products %}
+        <div class="product">
+            <img src="{{ dic.image }}" alt="{{ dic.name }}" class="product-image">
+            <div class="product-info">
+                <h2 class="product-name">{{ dic.name }}</h2>
+                <p class="product-description">{{ dic.description }}</p>
+                <form action="{% url 'mart:index' %}" method="POST" class="add-to-cart-form">
+                    {% csrf_token %}
+                    <input type="hidden" name="product_id" value="{{ dic.id }}">
+                    <input type="submit" value="Add To Cart" class="add-to-cart-button" />
+                </form>
+            </div>
+        </div>
+    {% endfor %}
+</div>
+
+{% endblock %}

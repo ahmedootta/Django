@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+    Cart
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'cart/styles.css' %}">
+{% endblock %}
+
+{% block body %}
+    <div class="cart-grid">
+        {% for dic in cart %}
+            <div class="cart-item">
+                <img src="{{ dic.image }}" alt="{{ dic.name }}" class="cart-image">
+                <div class="cart-info">
+                    <h2 class="cart-name">{{ dic.name }}</h2>
+                    <p class="cart-description">{{ dic.description }}</p>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+
+{% endblock %}

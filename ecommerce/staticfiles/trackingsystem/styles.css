@@ -42,8 +42,11 @@ button{
     cursor: pointer;
 }
 
-
-nav, ul{
-    padding: 30px;
-    color: darkmagenta;
+.add_link{
+    border: 1px solid slateblue;
+    width: 10%;
+    padding: auto;
+    text-align: left;
+    background-color: rgb(196, 214, 129);
+    padding: 1rem;
 }
